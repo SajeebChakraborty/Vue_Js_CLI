@@ -2,6 +2,14 @@
   <img alt="Vue logo" src="./assets/logo.png">
   <h3>{{ title }}</h3>
   <Header></Header>
+
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>Products</li>
+                <li>Cart</li>
+            </ul>
+        </nav>
 </template>
 
 <script>

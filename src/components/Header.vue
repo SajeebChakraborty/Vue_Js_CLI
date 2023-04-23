@@ -25,11 +25,25 @@ export default {
     }
 }
 </script>
-<style skoped>
+<style scoped>
 
-    nav{
+    .Header {
+        background-color: #f1f1f1;
+        padding: 20px;
+    }
 
-        text-align: center;
+    nav {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    ul {
+        display: flex;
+        list-style: none;
+    }
+
+    li {
+        padding: 0 10px;
     }
 
 </style>
