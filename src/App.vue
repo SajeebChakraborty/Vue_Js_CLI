@@ -1,9 +1,11 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
   <h3>{{ title }}</h3>
+  <Header></Header>
 </template>
 
 <script>
+import Header from './components/Header.vue'
 
 export default {
   name: 'App',
@@ -11,6 +13,9 @@ export default {
     return {
       title: 'Welcome to Your Vue.js App'
     }
+  },
+  components: {
+    Header
   }
 }
 </script>
