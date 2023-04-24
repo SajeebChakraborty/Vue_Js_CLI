@@ -3,6 +3,7 @@
   <h3>{{ title }}</h3>
   <Header></Header>
   <Hook ></Hook>
+  <Post></Post>
 
   <AllFriends :friends="friends" @delete="deletefriend"></AllFriends>
 </template>
@@ -11,6 +12,7 @@
 import Header from './components/Header.vue'
 import AllFriends from './components/AllFriends.vue'
 import Hook from './components/Hook.vue'
+import Post from './components/Post.vue'
 
 export default {
   name: 'App',
@@ -41,6 +43,7 @@ export default {
     Header,
     AllFriends,
     Hook,
+    Post,
   }
 }
 </script>
