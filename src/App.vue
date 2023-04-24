@@ -3,7 +3,7 @@
   <h3>{{ title }}</h3>
   <Header></Header>
 
-  <AllFriends :friends="friends"></AllFriends>
+  <AllFriends :friends="friends" @delete="deletefriend"></AllFriends>
 </template>
 
 <script>
@@ -25,6 +25,15 @@ export default {
         ]
 
     }
+  },
+  methods:{
+
+    deletefriend(payload){
+
+        this.friends = this.friends.filter(friend => friend.name !== payload.name)
+
+    }
+
   },
   components: {
     Header,

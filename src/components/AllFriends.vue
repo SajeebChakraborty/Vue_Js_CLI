@@ -5,6 +5,7 @@
         <div v-for="(friend,index) in friends" :key="index">
 
             <span>{{friend.name}}</span>
+            <button @click="unfriend(friend.name)">Unfriend</button>
 
         </div>
 
@@ -23,7 +24,14 @@ export default {
           
 
         }
-    }
+    },
+    methods: {
+        unfriend(name) {
+            this.$emit('delete', { name })
+        }
+  }
+
+
 }
 </script>
 <style scoped>
