@@ -2,7 +2,8 @@
 
     <div class="Post">
 
-        <div v-for="(post,index) in post" :key="index">
+        <input type="text" v-model="search" placeholder="Search" class="form-control">
+        <div v-for="(post,index) in searchPost" :key="index">
 
             <span>{{post.title}}</span>
 
@@ -22,8 +23,16 @@ export default {
     data () {
         return {
             
-          post:{}
+          post:{},
+          search:'',
 
+        }
+    },
+    computed: {
+        searchPost(){
+            return this.post.filter((post) => {
+                return post.title.match(this.search)
+            })
         }
     },
     created(){
