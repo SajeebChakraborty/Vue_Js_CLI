@@ -3,27 +3,32 @@
   <h3>{{ title }}</h3>
   <Header></Header>
 
-        <nav>
-            <ul>
-                <li>Home</li>
-                <li>Products</li>
-                <li>Cart</li>
-            </ul>
-        </nav>
+  <AllFriends :friends="friends"></AllFriends>
 </template>
 
 <script>
 import Header from './components/Header.vue'
+import AllFriends from './components/AllFriends.vue'
 
 export default {
   name: 'App',
   data () {
     return {
-      title: 'Welcome to Your Vue.js App'
+      title: 'Welcome to Your Vue.js App',
+      friends: [
+
+                {name:"a",online:true},
+                {name:"b",online:false},
+                {name:"c",online:true},
+                {name:"d",online:true},
+
+        ]
+
     }
   },
   components: {
-    Header
+    Header,
+    AllFriends,
   }
 }
 </script>
