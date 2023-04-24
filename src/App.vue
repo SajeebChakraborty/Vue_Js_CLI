@@ -2,6 +2,7 @@
   <img alt="Vue logo" src="./assets/logo.png">
   <h3>{{ title }}</h3>
   <Header></Header>
+  <Hook ></Hook>
 
   <AllFriends :friends="friends" @delete="deletefriend"></AllFriends>
 </template>
@@ -9,6 +10,7 @@
 <script>
 import Header from './components/Header.vue'
 import AllFriends from './components/AllFriends.vue'
+import Hook from './components/Hook.vue'
 
 export default {
   name: 'App',
@@ -38,6 +40,7 @@ export default {
   components: {
     Header,
     AllFriends,
+    Hook,
   }
 }
 </script>
